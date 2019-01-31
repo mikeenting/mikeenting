@@ -12,7 +12,11 @@ class Gebruiker{
 	String voornaam;
 	int userID;
 	void requestreason() {
-		System.out.println(voornaam + "wil graag gebruik maken van de applicatie met het volgende userID:" + userID);
+		System.out.println(voornaam + " wil graag gebruik maken van de applicatie met het volgende userID:" + userID);
+	}
+	void naamVeranderen(String nieuweNaam) {
+		voornaam = nieuweNaam;
+		
 	}
 	
 }
