@@ -1,28 +1,8 @@
-# Site settings
 title: "Mike Enting"
 description: "Personal website"
-baseurl: ""
+baseurl: "" 
 url: "https://mikeenting.me"
-
-# Theme
 theme: minima
-
-# Author information 
-author:
-  name: "Mike Enting"
-  url: "https://mikeenting.me"
-
-# Plugins
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
-
-# Pages to show in header navigation
-header_pages:
-  - index.md
-  - resume.md
-  - contact.md
-
-# Minimal Mistakes theme settings
-header:
-  overlay_color: "rgba(0,0,0,0.5)" 

@@ -1,9 +1,10 @@
 ---
 layout: page
 title: "Contact"
+permalink: /contact
 ---
 
-## Get in touch
+# Contact Me
 
-- 📧 Email: [youremail@example.com](mailto:youremail@example.com)  
-- 💼 LinkedIn: [linkedin.com/in/your-linkedin](https://www.linkedin.com/in/your-linkedin/)  
+Feel free to reach out via email: [mikeenting@gmail.com](mailto:mikeenting@gmail.com)  
+Or connect on [LinkedIn](https://www.linkedin.com/in/mikeenting/)
