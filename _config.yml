@@ -2,7 +2,7 @@ title: "Mike Enting"
 description: "Personal website and professional profile"
 baseurl: "" 
 url: "https://mikeenting.me" 
-theme: minimal-mistakes-jekyll
+theme: minimal-mistakes
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
