@@ -5,7 +5,7 @@ baseurl: ""
 url: "https://mikeenting.me"
 
 # Theme
-theme: minimal-mistakes-jekyll
+theme: jekyll-theme-minimal
 
 # Author information 
 author:
