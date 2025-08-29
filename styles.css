@@ -1,0 +1,149 @@
+/* Global styles */
+:root {
+  --color-base: #ffffff;
+  --color-accent: #1F3A93;      /* navy */
+  --color-secondary: #E8DCC3;   /* warm beige */
+  --color-highlight: #6AA7C3;   /* muted teal */
+  --font-heading: 'Montserrat', sans-serif;
+  --font-body: 'Open Sans', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-body);
+  color: #333;
+  background-color: var(--color-base);
+  line-height: 1.6;
+}
+
+/* Hero section */
+.hero {
+  background-color: var(--color-secondary);
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 4rem 1rem;
+}
+
+.hero .logo {
+  width: 120px;
+  height: auto;
+  margin-bottom: 1rem;
+}
+
+.hero h1 {
+  font-family: var(--font-heading);
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  color: var(--color-accent);
+}
+
+.tagline {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 1.5rem;
+}
+
+.cta-button {
+  background-color: var(--color-accent);
+  color: var(--color-base);
+  padding: 0.75rem 1.5rem;
+  border-radius: 3px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.2s;
+}
+
+.cta-button:hover {
+  background-color: var(--color-highlight);
+}
+
+/* Navigation */
+.navbar {
+  background-color: var(--color-base);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.navbar li {
+  margin: 0 1rem;
+}
+
+.navbar a {
+  color: var(--color-accent);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s;
+}
+
+.navbar a:hover {
+  color: var(--color-highlight);
+}
+
+/* Sections */
+.section {
+  padding: 4rem 1rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.section h2 {
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--color-accent);
+  position: relative;
+}
+
+.section h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 4px;
+  background-color: var(--color-highlight);
+  margin-top: 0.5rem;
+}
+
+.section p {
+  font-size: 1rem;
+  color: #444;
+  margin-bottom: 1rem;
+}
+
+/* Footer */
+.footer {
+  background-color: var(--color-secondary);
+  text-align: center;
+  padding: 1.5rem 1rem;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/* Responsive layout */
+@media (min-width: 768px) {
+  .hero h1 {
+    font-size: 3rem;
+  }
+  .tagline {
+    font-size: 1.4rem;
+  }
+  .section h2 {
+    font-size: 2.4rem;
+  }
+}
