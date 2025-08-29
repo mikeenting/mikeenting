@@ -66,6 +66,17 @@ body {
 }
 
 /* Navigation */
+
+/* Container to align logo + links */
+.navbar .nav-container{
+  display:flex;
+  align-items:center;           /* vertically center */
+  justify-content:space-between;
+  max-width:1100px;
+  margin:0 auto;
+  padding:0.5rem 1rem;
+}
+
 .navbar {
   background-color: var(--color-base);
   box-shadow: 0 2px 4px rgba(0,0,0,0.05);
@@ -74,26 +85,29 @@ body {
   z-index: 10;
 }
 
-.navbar ul {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  padding: 1rem;
+/* Links */
+.nav-links{
+  list-style:none;
+  display:flex;
+  gap:1.5rem;                   /* spacing between items */
+  margin:0;                     /* remove default margins */
+  padding:0;                    /* remove default padding */
 }
 
-.navbar li {
-  margin: 0 1rem;
+.nav-links a{
+  color:var(--color-accent);
+  text-decoration:none;
+  font-weight:600;
+  transition:color .2s;
 }
 
-.navbar a {
-  color: var(--color-accent);
-  text-decoration: none;
-  font-weight: 600;
-  transition: color 0.2s;
-}
+.nav-links a:hover{ color:var(--color-highlight); }
 
-.navbar a:hover {
-  color: var(--color-highlight);
+/* Logo */
+.nav-logo img{
+  width:60px;                   /* 60–80px keeps bar compact */
+  height:auto;
+  display:block;                /* removes inline gap */
 }
 
 /* Sections */
@@ -146,4 +160,27 @@ body {
   .section h2 {
     font-size: 2.4rem;
   }
+}
+
+.headshot {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto 1rem auto;
+}
+
+.logo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1.5rem;
+  align-items: center;
+  justify-items: center;
+}
+
+.logo-grid img {
+  width: 200px;          /* fits the 400×160 canvas nicely */
+  height: auto;
+  filter: grayscale(100%);   /* just in case a logo isn’t pure grey */
+  opacity: 0.85;             /* subtle, minimalist feel */
 }
