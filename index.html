@@ -1,41 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mike Enting</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-  <header id="home" class="hero">
+
+<nav class="navbar">
+  <div class="nav-container">
+    <a href="#about" class="nav-logo" aria-label="Go to about">
+      <img src="images/logo-tight.png" alt="ME logo">
+    </a>
+
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+  <header id="about" class="hero">
     <div class="hero-content">
-      <img src="images/logo.png" alt="ME Logo" class="logo" />
-      <h1>Mike Enting</h1>
-      <p class="tagline">Business Analyst & Mobile App Enthusiast</p>
+      <img src="images/headshot.png" alt="Headshot of Mike Enting" class="headshot">
+      <h1>Hi, I'm Mike!</h1>
+      <p class="tagline">With 8+ years of experience I simplify complex ideas and bring structure to every project.</p>
       <a href="#contact" class="cta-button">Get in Touch</a>
     </div>
   </header>
 
-  <nav class="navbar">
-    <ul>
-      <li><a href="#home">Home</a></li>
-      <li><a href="#resume">Résumé</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
+
 
   <main>
-    <section id="resume" class="section resume">
-      <h2>Résumé</h2>
-      <p>This section is under construction. Here you will share your professional experience, achievements and skills once you have prepared them.</p>
+    <section id="experience" class="section experience">
+      <h2>Experience</h2>
+      <p>To be added</p>
+      <!-- <div class="logo-grid">
+        <img src="images/rug.png" alt="University of Groningen" /> -->
     </section>
 
     <section id="contact" class="section contact">
       <h2>Contact</h2>
-      <p>Email: <a href="mailto:your.email@example.com">your.email@example.com</a></p>
-      <p>LinkedIn: <a href="https://www.linkedin.com/in/yourprofile" target="_blank">linkedin.com/in/yourprofile</a></p>
-      <p>Location: Zaltbommel, NL</p>
+      <p>Email: <a href="mailto:mikeenting@gmail.com">mikeenting@gmail.com</a></p>
+      <p>LinkedIn: <a href="https://www.linkedin.com/in/mikeenting" target="_blank">linkedin.com/in/mikeenting</a></p>
+      <p>Location: Amersfoort, NL</p>
     </section>
   </main>
 
@@ -48,4 +63,5 @@
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
 </body>
+
 </html>
