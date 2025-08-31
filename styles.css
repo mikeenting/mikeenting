@@ -332,3 +332,44 @@ body {
   .contact-btn{ transition:none; }
   .contact-btn:hover, .contact-btn:focus-visible{ transform:none; }
 }
+
+/* Space below the grid so tooltips/cards don’t crowd the CTA */
+.experience .logo-grid {
+  margin-bottom: 1.5rem;
+}
+
+/* Center the CTA and add top padding */
+.experience-cta {
+  display: flex;
+  justify-content: center;
+  padding-top: 1rem;          /* increase if you want more separation */
+}
+
+/* Button styling consistent with your palette */
+.cta-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: .7rem 1.2rem;
+  border-radius: 10px;
+  border: 1px solid rgba(31,58,147,.12);
+  background: var(--color-base);
+  color: var(--color-accent);
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: 0 2px 8px rgba(0,0,0,.06), 0 1px 2px rgba(0,0,0,.04);
+  transition: transform .15s ease, box-shadow .2s ease, background .2s ease, color .2s ease;
+}
+
+.cta-button:hover,
+.cta-button:focus-visible {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0,0,0,.08);
+  background: var(--color-accent);
+  color: var(--color-base);
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce){
+  .cta-button { transition: none; }
+}

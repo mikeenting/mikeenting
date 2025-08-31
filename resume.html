@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Mike Enting — Resume</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Fonts to match site -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;600&display=swap"
+        rel="stylesheet">
+    <style>
+        /* Brand variables (match your site) */
+        :root {
+            --color-base: #ffffff;
+            --color-ink: #0f172a;
+            /* text */
+            --color-muted: #6b7280;
+            /* secondary text */
+            --color-accent: #1F3A93;
+            /* navy */
+            --color-key: #EDEAE3;
+            /* soft beige accents (optional) */
+        }
+
+        /* Page + print setup */
+        @page {
+            size: A4;
+            margin: 18mm;
+        }
+
+        html,
+        body {
+            background: var(--color-base);
+            color: var(--color-ink);
+        }
+
+        body {
+            font-family: "Open Sans", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+            line-height: 1.5;
+        }
+
+        .page {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0;
+        }
+
+        /* Header */
+        .hdr {
+            display: grid;
+            grid-template-columns: 1fr auto;
+            gap: 12px;
+            align-items: center;
+        }
+
+        .name {
+            font-family: Montserrat, sans-serif;
+            font-weight: 700;
+            font-size: 28px;
+            letter-spacing: .2px;
+            margin: 0;
+        }
+
+        .role {
+            color: var(--color-muted);
+            margin: .15rem 0 0 0;
+            font-weight: 600;
+        }
+
+        .meta {
+            display: flex;
+            gap: 14px;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+            font-size: 12.5px;
+        }
+
+        .meta a {
+            color: var(--color-accent);
+            text-decoration: none;
+        }
+
+        .meta a:hover {
+            text-decoration: underline;
+        }
+
+        /* Section */
+        .sec {
+            margin-top: 18px;
+        }
+
+        .sec h2 {
+            font-family: Montserrat, sans-serif;
+            font-size: 14px;
+            letter-spacing: .14em;
+            text-transform: uppercase;
+            margin: 0 0 10px 0;
+            border-top: 2px solid var(--color-accent);
+            padding-top: 8px;
+        }
+
+        /* Experience list */
+        .item {
+            display: grid;
+            grid-template-columns: 1fr auto;
+            gap: 6px 16px;
+            padding: 10px 0;
+        }
+
+        .item+.item {
+            border-top: 1px solid rgba(0, 0, 0, .06);
+        }
+
+        .item h3 {
+            font-weight: 600;
+            font-size: 15px;
+            margin: 0;
+        }
+
+        .item .where {
+            color: var(--color-accent);
+            font-weight: 600;
+        }
+
+        .item .when {
+            color: var(--color-muted);
+            font-size: 12.5px;
+            white-space: nowrap;
+        }
+
+        .item p {
+            margin: 4px 0 0 0;
+            font-size: 13.25px;
+        }
+
+        .bul {
+            margin: 6px 0 0 0;
+            padding-left: 18px;
+        }
+
+        .bul li {
+            margin: 2px 0;
+        }
+
+        /* Two-column utilities (optional) */
+        .cols {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+
+        .tag {
+            display: inline-block;
+            font-size: 12px;
+            padding: .2rem .5rem;
+            border: 1px solid rgba(0, 0, 0, .08);
+            border-radius: 8px;
+            margin: 3px 6px 0 0;
+        }
+
+        /* Print clarity */
+        * {
+            -webkit-print-color-adjust: exact;
+            print-color-adjust: exact;
+        }
+
+        @media print {
+            a {
+                color: var(--color-ink);
+                text-decoration: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <main class="page">
+        <header class="hdr">
+            <div>
+                <h1 class="name">Mike Enting</h1>
+                <p class="role">Business Analyst · Mobile (Tikkie)</p>
+            </div>
+            <div class="meta">
+                <span>Amersfoort, NL</span>
+                <a href="mailto:mikeenting@gmail.com">mikeenting@gmail.com</a>
+                <a href="https://www.linkedin.com/in/mikeenting">linkedin.com/in/mikeenting</a>
+                <a href="https://github.com/mikeenting">github.com/mikeenting</a>
+                <span>Mandarin Chinese (speaking)</span>
+            </div>
+        </header>
+
+        <section class="sec">
+            <h2>Profile</h2>
+            <p>Pragmatic business analyst known for simplicity, structure, and optimisation. Down-to-earth,
+                goal-oriented, and a touch of dry humour. I help mobile teams clarify requirements, reduce complexity,
+                and ship value faster.</p>
+        </section>
+
+        <section class="sec">
+            <h2>Experience</h2>
+
+            <div class="item">
+                <div>
+                    <h3><span class="where">Tikkie (ABN AMRO)</span> — Business Analyst</h3>
+                    <p>Partner to PO and engineers in a Scrum team for the Tikkie app. Led discovery, clarified scope,
+                        and translated insights into implementable stories.</p>
+                    <ul class="bul">
+                        <li>Cut cycle time by X% by simplifying acceptance criteria and eliminating handoffs.</li>
+                        <li>Introduced lightweight metrics dashboard improving decision speed.</li>
+                        <li>Improved backlog health and release predictability.</li>
+                    </ul>
+                </div>
+                <div class="when">202X–present</div>
+            </div>
+
+            <div class="item">
+                <div>
+                    <h3><span class="where">Previous Role / Company</span> — Analyst</h3>
+                    <p>Short one-line impact statement.</p>
+                    <ul class="bul">
+                        <li>Outcome or achievement with numbers.</li>
+                        <li>Another relevant bullet.</li>
+                    </ul>
+                </div>
+                <div class="when">20XX–20XX</div>
+            </div>
+        </section>
+
+        <section class="sec cols">
+            <div>
+                <h2>Skills</h2>
+                <p>
+                    <span class="tag">Requirements</span>
+                    <span class="tag">Story mapping</span>
+                    <span class="tag">Data-informed decisions</span>
+                    <span class="tag">Jira</span>
+                    <span class="tag">SQL basics</span>
+                </p>
+            </div>
+            <div>
+                <h2>Education</h2>
+                <p><strong>University of Groningen</strong> — Degree / Field</p>
+                <p><strong>Fudan University</strong> — Exchange / Coursework</p>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>
