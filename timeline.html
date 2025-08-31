@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Mike Enting — Timeline</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Fonts to match site -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;600&display=swap"
+        rel="stylesheet">
+    <!-- Shared site styles + resume-only styles -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="timeline.css">
+</head>
+<div class="scroll-progress" role="progressbar" aria-label="Scroll progress" aria-valuemin="0" aria-valuemax="100"
+    aria-valuenow="100">
+    <div class="scroll-progress__bar"></div>
+</div>
+
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html#about" class="nav-logo" aria-label="Go to about">
+                <img src="images/logo-tight.png" alt="ME logo">
+            </a>
+
+            <ul class="nav-links">
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#experience">Experience</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="timeline">
+        <div class="container left">
+            <div class="content">
+                <h2>2023</h2>
+                <p><strong>🇳🇱 Amsterdam, NL</strong></p>
+                <p>IT Business Analyst at Tikkie. Building and roll-out of the new Advertising- and User Engagement service, used by 10+ million users in the Tikkie mobile app.</p>
+            </div>
+        </div>
+        <div class="container right">
+            <div class="content">
+                <h2>2022</h2>
+                <p><strong>🇳🇱 Amsterdam, NL</strong></p>
+                <p>Data Analyst at ABN AMRO. Responsible for implementation and roll-out of a bank-wide
+                    dashboard on Behavioural Risk Management. Responsible for onboarding the required data, data model
+                    design, dashboard design and access management.</p>
+            </div>
+        </div>
+        <div class="container left">
+            <div class="content">
+                <h2>2020</h2>
+                <p><strong>🇳🇱 Amsterdam, NL</strong></p>
+                <p>IT Business Developer at ABN AMRO. Responsible for implementation and roll-out of a bank-wide
+                    SaaS solution that allows users to report a Data Breach. Collaborated with stakeholders across
+                    the bank to ensure compliance with GDPR and information security</p>
+            </div>
+        </div>
+        <div class="container right">
+            <div class="content">
+                <h2>2018</h2>
+                <p><strong>🇳🇱 Amsterdam, NL</strong></p>
+                <p>IT traineeship at ABN AMRO via <a href="https://www.youngcolfield.nl">Young Colfield.</a> As an
+                    IT
+                    Engineer, I was responsible for implementing changes to the bank-wide solution for operational
+                    risk
+                    management.</p>
+            </div>
+        </div>
+        <div class="container left">
+            <div class="content">
+                <h2>2018</h2>
+                <p><strong>🇨🇳 Shanghai, CN</strong></p>
+                <p>Business Development Internship at Avocado Masters Shanghai</p>
+            </div>
+        </div>
+        <div class="container right">
+            <div class="content">
+                <h2>2017</h2>
+                <p><strong>🇨🇳 Shanghai, CN</strong></p>
+                <p>Fudan University - Master of Science </p>
+                <p>Awarded with the SINO-Dutch full scholarship, I studied the master 'China and the World Economy'
+                </p>
+            </div>
+        </div>
+        <div class="container left">
+            <div class="content">
+                <h2>2016</h2>
+                <p><strong>🇳🇱 Groningen, NL</strong></p>
+                <p>Master of Science, International Business</p>
+            </div>
+        </div>
+        <div class="container right">
+            <div class="content">
+                <h2>2015</h2>
+                <p><strong>🇨🇳 Beijing, CN</strong></p>
+                <p>Tsinghua University - Gap Year </p>
+                <p>Awarded with the Confucius scholarship, I participated in a full year intensive Mandarin Program
+                </p>
+            </div>
+        </div>
+        <div class="container left">
+            <div class="content">
+                <h2>2015</h2>
+                <p><strong>🇹🇼 Hsinchu, Taiwan</strong></p>
+                <p>National Chiao Tung University - 1 semester Exchange</p>
+            </div>
+        </div>
+        <div class="container right">
+            <div class="content">
+                <h2>2012</h2>
+                <p><strong>🇳🇱 Groningen, NL</strong></p>
+                <p>University of Groningen - Bachelor International Business </p>
+            </div>
+        </div>
+        <div class="container left">
+            <div class="content">
+                <h2>2011</h2>
+                <p><strong>🇺🇸 Kansas, USA</strong></p>
+                <p>Gap year at the Neosho County Community College via <a href="https://www.yfu.nl">Youth For
+                        Understanding (YFU).</a></p>
+            </div>
+        </div>
+
+        <div class="container right">
+            <div class="content">
+                <h2>2005</h2>
+                <p><strong>🇳🇱 Assen, NL</strong></p>
+                <p>VWO diploma (Highschool) at the Dr. Nassau College, Quintus. Final school research project on
+                    Americanisation of The Netherlands.</p>
+            </div>
+        </div>
+
+        <div class="container left">
+            <div class="content">
+                <h2>1993</h2>
+                <p><strong>🇳🇱 Grolloo, NL</strong></p>
+                <p>🐣</p>
+            </div>
+        </div>
+    </div>
+    <script>
+        if (location.hash === '#bottom') {
+            window.addEventListener('load', () => {
+                window.scrollTo({ top: document.documentElement.scrollHeight, behavior: 'smooth' });
+            });
+        }
+    </script>
+    <script>
+        (function () {
+            const bar = document.querySelector('.scroll-progress__bar');
+            const container = document.querySelector('.scroll-progress');
+            if (!bar || !container) return;
+
+            const clamp = (v, min, max) => Math.max(min, Math.min(max, v));
+
+            function update() {
+                const doc = document.documentElement;
+                const scrollTop = window.scrollY || doc.scrollTop || 0;
+                const max = (doc.scrollHeight - window.innerHeight) || 0;
+
+                // raw goes 0 (top) -> 1 (bottom); we invert it
+                const raw = max > 0 ? (scrollTop / max) : 0;
+                const reversed = clamp(1 - raw, 0, 1);  // top=1, bottom=0
+
+                bar.style.transform = `scaleX(${reversed})`;
+                container.setAttribute('aria-valuenow', Math.round(reversed * 100));
+            }
+
+            window.addEventListener('scroll', update, { passive: true });
+            window.addEventListener('resize', update);
+            window.addEventListener('load', update);
+            update();
+        })();
+    </script>
+
+</body>

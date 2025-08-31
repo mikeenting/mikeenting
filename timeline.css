@@ -1,0 +1,167 @@
+/* ===== Timeline (brand-aligned) ===== */
+
+/* Root tokens are expected in your main styles; fallbacks included */
+:root{
+  --color-base: #ffffff;
+  --color-ink: #0f172a;
+  --color-muted: #6b7280;
+  --color-accent: #1F3A93;
+  --color-key: #EDEAE3;
+}
+
+/* Wrapper */
+.timeline{
+  position: relative;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1rem 0;
+}
+
+/* Vertical line */
+.timeline::after{
+  content:"";
+  position:absolute;
+  top:0; bottom:0; left:50%;
+  width:2px;
+  background: rgba(31,58,147,.15); /* subtle navy tint */
+  transform: translateX(-1px);
+}
+
+/* Item container (scoped to avoid global .container conflicts) */
+.timeline .container{
+  position: relative;
+  width:50%;
+  padding: 0 1.25rem 1.75rem;
+  background: transparent;
+}
+
+/* Dots on the line */
+.timeline .container::after{
+  content:"";
+  position:absolute;
+  top:14px;
+  width:18px; height:18px;
+  background: var(--color-base);
+  border:3px solid var(--color-accent);
+  border-radius:50%;
+  box-shadow: 0 1px 3px rgba(0,0,0,.08);
+  z-index:2;
+  right:-10px;                 /* default for .left */
+}
+
+/* Left / Right positioning */
+.left{ left:0; }
+.right{ left:50%; }
+.right::after{ left:-10px; right:auto; }
+
+/* Arrow pointers (match card background) */
+.left::before,
+.right::before{
+  content:"";
+  position:absolute; top:20px;
+  width:0; height:0; z-index:1;
+  border:10px solid transparent;
+}
+.left::before{
+  right:30px;
+  border-left-color: var(--color-base);
+}
+.right::before{
+  left:30px;
+  border-right-color: var(--color-base);
+}
+
+/* Card */
+.content{
+  position:relative;
+  padding: 1rem 1.25rem;
+  background: var(--color-base);
+  color: var(--color-ink);
+  border:1px solid rgba(31,58,147,.06);
+  border-radius:10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,.06), 0 1px 2px rgba(0,0,0,.04);
+}
+
+.content h3{ margin:0 0 .25rem; font-weight:600; }
+.content p{ margin:.25rem 0 0; color: var(--color-ink); }
+.content .muted{ color: var(--color-muted); }
+
+/* ===== Responsive ===== */
+@media (max-width: 700px){
+  .timeline::after{ left:24px; }
+
+  .timeline .container{
+    width:100%;
+    padding-left:56px;
+    padding-right:16px;
+  }
+
+  /* Make all items behave like left side */
+  .right{ left:0; }
+  .timeline .container::after{ left:15px; right:auto; }
+  .left::before,
+  .right::before{
+    left:40px; right:auto;
+    border:10px solid transparent;
+    border-right-color: var(--color-base);
+  }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce){
+  .content{ box-shadow: 0 1px 3px rgba(0,0,0,.06); }
+}
+
+/* Keep the dot on top */
+.timeline .container::after{
+  z-index: 4;
+}
+
+/* Put the triangle below the card and center it vertically */
+.left::before,
+.right::before{
+  z-index: 1;               /* below the card */
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* Ensure the card sits above the arrow */
+.content{
+  position: relative;
+  z-index: 2;
+}
+
+/* Add a little extra padding on the arrow side so text/year clears it */
+.left .content{  padding-right: 1.75rem; }
+.right .content{ padding-left:  1.75rem; }
+
+/* Smooth jump (where supported) */
+html { scroll-behavior: smooth; }
+
+/* Space below the last card */
+.timeline { padding-bottom: 2rem; }
+
+/* Ensure the anchor scrolls clear of the sticky navbar */
+.timeline-end { 
+  height: 1px; 
+  scroll-margin-top: 80px; /* match your navbar height */
+}
+/* Bottom scroll progress (top = 100%, bottom = 0%) */
+.scroll-progress{
+  position: fixed;
+  left: 0; right: 0; bottom: 0;
+  height: 6px;
+  background: var(--color-key, #EDEAE3);
+  z-index: 9999;
+  pointer-events: none;              /* don't block clicks at the bottom */
+}
+.scroll-progress__bar{
+  height: 100%;
+  background: var(--color-accent, #1F3A93);
+  transform-origin: left center;
+  transform: scaleX(1);              /* full at page top */
+  transition: transform .1s linear;
+}
+
+/* optional: give content a hair of breathing room above the bar */
+body{ padding-bottom: 8px; }
