@@ -1,0 +1,88 @@
+/* ===== Resume page basics ===== */
+html, body {
+  background: var(--color-base);
+  color: var(--color-ink);
+}
+body {
+  font-family: var(--font-body);
+  line-height: 1.5;
+}
+
+.page { max-width: 900px; margin: 0 auto; }
+
+/* Header */
+.hdr {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 12px;
+  align-items: center;
+  padding-top: 8px;
+}
+.name {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 28px;
+  letter-spacing: .2px;
+  margin: 0;
+}
+.role {
+  color: var(--color-muted);
+  margin: .15rem 0 0 0;
+  font-weight: 600;
+}
+.meta {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  font-size: 12.5px;
+}
+.meta a { color: var(--color-accent); text-decoration: none; }
+.meta a:hover { text-decoration: underline; }
+
+/* Sections */
+.sec { margin-top: 18px; }
+.sec h2 {
+  font-family: var(--font-heading);
+  font-size: 14px;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  margin: 0 0 10px 0;
+  border-top: 2px solid var(--color-accent);
+  padding-top: 8px;
+}
+
+/* Experience items */
+.item {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 6px 16px;
+  padding: 10px 0;
+}
+.item + .item { border-top: 1px solid rgba(0,0,0,.06); }
+.item h3 { font-weight: 600; font-size: 15px; margin: 0; }
+.item .where { color: var(--color-accent); font-weight: 600; }
+.item .when { color: var(--color-muted); font-size: 12.5px; white-space: nowrap; }
+.item p { margin: 4px 0 0 0; font-size: 13.25px; }
+.bul { margin: 6px 0 0 0; padding-left: 18px; }
+.bul li { margin: 2px 0; }
+
+.cols { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.tag {
+  display: inline-block; font-size: 12px; padding: .2rem .5rem;
+  border: 1px solid rgba(0,0,0,.08); border-radius: 8px; margin: 3px 6px 0 0;
+}
+
+/* ===== Print (PDF) setup ===== */
+@page { size: A4; margin: 18mm; }
+
+/* ensure brand colors render in PDF dialogs */
+* { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+
+@media print {
+  a { color: var(--color-ink); text-decoration: none; }
+  /* prevent awkward splits */
+  .item, .sec, .hdr { break-inside: avoid; }
+  /* tighten grid on A4 if needed */
+  .cols { gap: 12px; }
+}
