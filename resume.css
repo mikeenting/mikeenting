@@ -8,15 +8,22 @@ body {
   line-height: 1.5;
 }
 
-.page { max-width: 900px; margin: 0 auto; }
+.page { 
+  max-width: 900px; 
+  margin: 0 auto; 
+}
 
 /* Header */
 .hdr {
   display: grid;
-  grid-template-columns: 1fr auto;
+  grid-template-columns: auto 1fr auto;
   gap: 12px;
   align-items: center;
   padding-top: 8px;
+}
+.logo img {
+  height: 100px; /* default screen size */
+  width: auto;
 }
 .name {
   font-family: var(--font-heading);
@@ -32,13 +39,38 @@ body {
 }
 .meta {
   display: flex;
-  gap: 14px;
-  flex-wrap: wrap;
-  justify-content: flex-end;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 6px;
   font-size: 12.5px;
 }
-.meta a { color: var(--color-accent); text-decoration: none; }
+.meta a { 
+  color: var(--color-accent); 
+  text-decoration: none; 
+  display: flex; 
+  align-items: center;
+  gap: 6px;
+}
 .meta a:hover { text-decoration: underline; }
+
+/* Contact items */
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12.5px;
+}
+.contact-item .icon {
+  width: 14px;
+  height: 14px;
+  flex-shrink: 0;
+  fill: currentColor;
+}
+.qr-code {
+  width: 60px;  /* compact QR code */
+  height: auto;
+  margin-top: 6px;
+}
 
 /* Sections */
 .sec { margin-top: 18px; }
@@ -67,22 +99,75 @@ body {
 .bul { margin: 6px 0 0 0; padding-left: 18px; }
 .bul li { margin: 2px 0; }
 
-.cols { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.cols { 
+  display: grid; 
+  grid-template-columns: 1fr 1fr; 
+  gap: 16px; 
+}
 .tag {
-  display: inline-block; font-size: 12px; padding: .2rem .5rem;
-  border: 1px solid rgba(0,0,0,.08); border-radius: 8px; margin: 3px 6px 0 0;
+  display: inline-block; 
+  font-size: 12px; 
+  padding: .2rem .5rem;
+  border: 1px solid rgba(0,0,0,.08); 
+  border-radius: 8px; 
+  margin: 3px 6px 0 0;
+}
+
+/* Bottom three-column layout */
+.cols-3 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 16px;
+}
+
+/* QR Section inside bottom grid */
+.qr-footer {
+  text-align: center;
+}
+.qr-title {
+  font-size: 12px;
+  color: var(--color-muted);
+  margin: 4px 0 8px 0;
+}
+.qr-footer .qr-code {
+  width: 80px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
 }
 
 /* ===== Print (PDF) setup ===== */
-@page { size: A4; margin: 18mm; }
+@page { 
+  size: A4; 
+  margin: 18mm; 
+}
 
 /* ensure brand colors render in PDF dialogs */
-* { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+* { 
+  -webkit-print-color-adjust: exact; 
+  print-color-adjust: exact; 
+}
 
 @media print {
+  html, body {
+    height: 100%;
+  }
+  .page {
+    height: 100%;
+    max-height: 100%;
+    /* scale down automatically if needed */
+    zoom: 0.95; /* adjust if still slightly overflowing */
+  }
+
   a { color: var(--color-ink); text-decoration: none; }
+
   /* prevent awkward splits */
-  .item, .sec, .hdr { break-inside: avoid; }
-  /* tighten grid on A4 if needed */
+  .item, .hdr { break-inside: avoid; }
+  .cols-3 { break-inside: avoid; }
+
+  /* tighten spacing for print */
+  .sec { margin-top: 12px; }
+  .hdr { padding-top: 4px; }
+  .logo img { height: 70px; } /* smaller logo for print */
   .cols { gap: 12px; }
 }

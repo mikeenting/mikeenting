@@ -17,24 +17,56 @@
 <body>
     <main class="page">
         <header class="hdr">
+            <div class="logo">
+                <img src="images/logo.png" alt="Personal Logo" />
+            </div>
             <div>
                 <h1 class="name">Mike Enting</h1>
                 <p class="role">IT Business Analyst</p>
             </div>
-            <div class="meta">
-                <span>Amersfoort, NL</span>
-                <a href="mailto:mikeenting@gmail.com">mikeenting@gmail.com</a>
-                <a href="https://www.linkedin.com/in/mikeenting">linkedin.com/in/mikeenting</a>
+            <div class="meta contact-actions">
+                <!-- Location -->
+                <div class="contact-item">
+                    <svg viewBox="0 0 24 24" class="icon" aria-hidden="true">
+                        <path d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7zm0 
+                             9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z" />
+                    </svg>
+                    <span>Amersfoort, NL</span>
+                </div>
+
+                <!-- Email -->
+                <div class="contact-item">
+                    <a href="mailto:mikeenting@gmail.com" aria-label="Email Mike">
+                        <svg viewBox="0 0 24 24" class="icon" aria-hidden="true">
+                            <path d="M4 6h16a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H4a2 
+                                 2 0 0 1-2-2V8a2 2 0 0 1 2-2zm0 2l8 5 8-5" />
+                        </svg>
+                        <span>mikeenting@gmail.com</span>
+                    </a>
+                </div>
+
+                <!-- LinkedIn -->
+                <div class="contact-item">
+                    <a href="https://www.linkedin.com/in/mikeenting" target="_blank" rel="noopener"
+                        aria-label="LinkedIn profile">
+                        <svg viewBox="0 0 24 24" class="icon" aria-hidden="true">
+                            <path d="M4.98 3.5A2.5 2.5 0 1 0 5 8.5a2.5 2.5 0 0 0-.02-5zM4 9h2v12H4zM9 9h2v1.7h.03c.28-.54 
+                                 1.02-1.1 2.1-1.1 2.25 0 2.87 1.42 2.87 3.27V21h-2v-6c0-1.44-.03-3.3-2.01-3.3-2.02 0-2.33 
+                                 1.58-2.33 3.2V21H9z" />
+                        </svg>
+                        <span>linkedin.com/in/mikeenting</span>
+                    </a>
+                </div>
             </div>
         </header>
 
         <section class="sec">
             <h2>Profile</h2>
             <p>Pragmatic and result-oriented business analyst with 8 years of
-                experience in the financial services industry. Skilled in agile delivery,
-                process design, and stakeholder management. International academic
-                and professional background, analytical mindset, and strong
-                problem-solving skills.</p>
+                experience in agile software delivery. International academic
+                and professional background, analytical mindset, strong technical and
+                problem-solving skills. Adept at bridging business needs with technical
+                solutions to deliver measurable impact.</p>
         </section>
 
         <section class="sec">
@@ -43,12 +75,14 @@
             <div class="item">
                 <div>
                     <h3><span class="where">Tikkie (ABN AMRO)</span> — Business Analyst</h3>
-                    <p>Partner to PO and engineers in a Scrum team for the Tikkie app. Led discovery, clarified scope,
-                        and translated insights into implementable stories.</p>
+                    <p>Partner to PO and engineers in a Scrum team for the Tikkie app. Responsible for scope
+                        clarification and timely delivery to over 10 million active users. Currently improving and
+                        automating the business client onboarding process.
+                    </p>
                     <ul class="bul">
-                        <li>Cut cycle time by X% by simplifying acceptance criteria and eliminating handoffs.</li>
-                        <li>Introduced lightweight metrics dashboard improving decision speed.</li>
-                        <li>Improved backlog health and release predictability.</li>
+                        <li>Launched Advertising Decision Engine, generating higher revenue streams for the Tikkie Retail app.</li>
+                        <li>Delivered an end-to-end engagement solution that increased usage of new propositions.</li>
+                        <li>Reduced operational setup time by over 70% through automation initiatives.</li>
                     </ul>
                 </div>
                 <div class="when">2023–present</div>
@@ -57,34 +91,43 @@
             <div class="item">
                 <div>
                     <h3><span class="where">ABN AMRO</span> — Data Analyst</h3>
-                    <p>Data-analyst within the risk data and modelling domain. Built and rolled
-                        out the Bank-wide Behavioural Risk Management dashboard used by
-                        2,000+ employees across departments.</p>
+                    <p>Data-analyst within the risk data and modelling domain. Responsible for building and roll-out of
+                        the Bank-wide Behavioural Risk Management dashboard used by
+                        2,000+ employees.</p>
                     <ul class="bul">
-                        <li>Outcome or achievement with numbers.</li>
-                        <li>Another relevant bullet.</li>
+                        <li>Onboarded 11 internal data sources and created a sustainable data model to support the
+                            dashboard</li>
+                        <li>Automated dashboard access management to ensure a future proof solution</li>
                     </ul>
                 </div>
                 <div class="when">2022–2023</div>
             </div>
         </section>
 
-        <section class="sec cols">
+        <!-- Bottom three-column section -->
+        <section class="sec cols-3">
             <div>
                 <h2>Skills</h2>
                 <p>
-                    <span class="tag">Requirements</span>
+                    <span class="tag">Glue the team</span>
                     <span class="tag">Story mapping</span>
+                    <span class="tag">Backlog Management</span>
+                    <span class="tag">Jira & Azure</span>
                     <span class="tag">Data-informed decisions</span>
-                    <span class="tag">Jira</span>
-                    <span class="tag">SQL basics</span>
+                    <span class="tag">Programming</span>
                 </p>
             </div>
             <div>
                 <h2>Education</h2>
-                <p><strong>University of Groningen</strong> — MSc International Business</p>
-                <p><strong>Fudan University</strong> — MSc China and the World Economy</p>
-                <p><strong>Tsinghua University</strong> — Intensive Mandarin Program</p>
+                <p><strong>University of Groningen</strong></p>
+                <p class="qr-title">— MSc International Business</p>
+                <p><strong>Fudan University</strong></p>
+                <p class="qr-title">— MSc China and the World Economy</p>
+            </div>
+            <div class="qr-footer">
+                <h2>More</h2>
+                <img src="images/qr-code.png" alt="QR code linking to personal website" class="qr-code" />
+                <p class="qr-title">Scan for more details</p>
             </div>
         </section>
     </main>
