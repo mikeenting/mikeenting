@@ -1,7 +1,7 @@
 /* ===== Timeline (brand-aligned) ===== */
 
 /* Root tokens are expected in your main styles; fallbacks included */
-:root{
+:root {
   --color-base: #ffffff;
   --color-ink: #0f172a;
   --color-muted: #6b7280;
@@ -10,7 +10,7 @@
 }
 
 /* Wrapper */
-.timeline{
+.timeline {
   position: relative;
   max-width: 1100px;
   margin: 0 auto;
@@ -18,150 +18,285 @@
 }
 
 /* Vertical line */
-.timeline::after{
-  content:"";
-  position:absolute;
-  top:0; bottom:0; left:50%;
-  width:2px;
-  background: rgba(31,58,147,.15); /* subtle navy tint */
+.timeline::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 2px;
+  background: rgba(31, 58, 147, .15);
+  /* subtle navy tint */
   transform: translateX(-1px);
 }
 
 /* Item container (scoped to avoid global .container conflicts) */
-.timeline .container{
+.timeline .container {
   position: relative;
-  width:50%;
+  width: 50%;
   padding: 0 1.25rem 1.75rem;
   background: transparent;
 }
 
 /* Dots on the line */
-.timeline .container::after{
-  content:"";
-  position:absolute;
-  top:14px;
-  width:18px; height:18px;
+.timeline .container::after {
+  content: "";
+  position: absolute;
+  top: 14px;
+  width: 18px;
+  height: 18px;
   background: var(--color-base);
-  border:3px solid var(--color-accent);
-  border-radius:50%;
-  box-shadow: 0 1px 3px rgba(0,0,0,.08);
-  z-index:2;
-  right:-10px;                 /* default for .left */
+  border: 3px solid var(--color-accent);
+  border-radius: 50%;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, .08);
+  z-index: 2;
+  right: -10px;
+  /* default for .left */
 }
 
 /* Left / Right positioning */
-.left{ left:0; }
-.right{ left:50%; }
-.right::after{ left:-10px; right:auto; }
+.left {
+  left: 0;
+}
+
+.right {
+  left: 50%;
+}
+
+.right::after {
+  left: -10px;
+  right: auto;
+}
 
 /* Arrow pointers (match card background) */
 .left::before,
-.right::before{
-  content:"";
-  position:absolute; top:20px;
-  width:0; height:0; z-index:1;
-  border:10px solid transparent;
+.right::before {
+  content: "";
+  position: absolute;
+  top: 20px;
+  width: 0;
+  height: 0;
+  z-index: 1;
+  border: 10px solid transparent;
 }
-.left::before{
-  right:30px;
+
+.left::before {
+  right: 30px;
   border-left-color: var(--color-base);
 }
-.right::before{
-  left:30px;
+
+.right::before {
+  left: 30px;
   border-right-color: var(--color-base);
 }
 
 /* Card */
-.content{
-  position:relative;
+.content {
+  position: relative;
   padding: 1rem 1.25rem;
   background: var(--color-base);
   color: var(--color-ink);
-  border:1px solid rgba(31,58,147,.06);
-  border-radius:10px;
-  box-shadow: 0 2px 8px rgba(0,0,0,.06), 0 1px 2px rgba(0,0,0,.04);
+  border: 1px solid rgba(31, 58, 147, .06);
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, .06), 0 1px 2px rgba(0, 0, 0, .04);
 }
 
-.content h3{ margin:0 0 .25rem; font-weight:600; }
-.content p{ margin:.25rem 0 0; color: var(--color-ink); }
-.content .muted{ color: var(--color-muted); }
+.content h3 {
+  margin: 0 0 .25rem;
+  font-weight: 600;
+}
+
+.content p {
+  margin: .25rem 0 0;
+  color: var(--color-ink);
+}
+
+.content .muted {
+  color: var(--color-muted);
+}
 
 /* ===== Responsive ===== */
-@media (max-width: 700px){
-  .timeline::after{ left:24px; }
+@media (max-width: 700px) {
+  .timeline::after {
+    left: 24px;
+  }
 
-  .timeline .container{
-    width:100%;
-    padding-left:56px;
-    padding-right:16px;
+  .timeline .container {
+    width: 100%;
+    padding-left: 56px;
+    padding-right: 16px;
   }
 
   /* Make all items behave like left side */
-  .right{ left:0; }
-  .timeline .container::after{ left:15px; right:auto; }
+  .right {
+    left: 0;
+  }
+
+  .timeline .container::after {
+    left: 15px;
+    right: auto;
+  }
+
   .left::before,
-  .right::before{
-    left:40px; right:auto;
-    border:10px solid transparent;
+  .right::before {
+    left: 40px;
+    right: auto;
+    border: 10px solid transparent;
     border-right-color: var(--color-base);
   }
 }
 
 /* Reduced motion */
-@media (prefers-reduced-motion: reduce){
-  .content{ box-shadow: 0 1px 3px rgba(0,0,0,.06); }
+@media (prefers-reduced-motion: reduce) {
+  .content {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, .06);
+  }
 }
 
 /* Keep the dot on top */
-.timeline .container::after{
+.timeline .container::after {
   z-index: 4;
 }
 
 /* Put the triangle below the card and center it vertically */
 .left::before,
-.right::before{
-  z-index: 1;               /* below the card */
+.right::before {
+  z-index: 1;
+  /* below the card */
   top: 50%;
   transform: translateY(-50%);
 }
 
 /* Ensure the card sits above the arrow */
-.content{
+.content {
   position: relative;
   z-index: 2;
 }
 
 /* Add a little extra padding on the arrow side so text/year clears it */
-.left .content{  padding-right: 1.75rem; }
-.right .content{ padding-left:  1.75rem; }
+.left .content {
+  padding-right: 1.75rem;
+}
+
+.right .content {
+  padding-left: 1.75rem;
+}
 
 /* Smooth jump (where supported) */
-html { scroll-behavior: smooth; }
+html {
+  scroll-behavior: smooth;
+}
 
 /* Space below the last card */
-.timeline { padding-bottom: 2rem; }
+.timeline {
+  padding-bottom: 2rem;
+}
 
 /* Ensure the anchor scrolls clear of the sticky navbar */
-.timeline-end { 
-  height: 1px; 
-  scroll-margin-top: 80px; /* match your navbar height */
+.timeline-end {
+  height: 1px;
+  scroll-margin-top: 80px;
+  /* match your navbar height */
 }
+
 /* Bottom scroll progress (top = 100%, bottom = 0%) */
-.scroll-progress{
+.scroll-progress {
   position: fixed;
-  left: 0; right: 0; bottom: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   height: 6px;
   background: var(--color-key, #EDEAE3);
   z-index: 9999;
-  pointer-events: none;              /* don't block clicks at the bottom */
+  pointer-events: none;
+  /* don't block clicks at the bottom */
 }
-.scroll-progress__bar{
+
+.scroll-progress__bar {
   height: 100%;
   background: var(--color-accent, #1F3A93);
   transform-origin: left center;
-  transform: scaleX(1);              /* full at page top */
+  transform: scaleX(1);
+  /* full at page top */
   transition: transform .1s linear;
 }
 
 /* optional: give content a hair of breathing room above the bar */
-body{ padding-bottom: 8px; }
+body {
+  padding-bottom: 8px;
+}
+
+/* Certificates block */
+.certificates {
+  margin-top: 1rem;
+}
+
+.certificates-title {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  color: var(--color-accent);
+  /* adjust to match your accent color */
+}
+
+/* Row of icons */
+.certificate-icons {
+  display: flex;
+  gap: 50px;
+}
+
+/* Single icon */
+.certificate-icon {
+  position: relative;
+  /* needed for tooltip */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.certificate-icon img {
+  width: 50px;
+  height: 50px;
+  opacity: 0.75;
+  transition: opacity 0.2s ease;
+}
+
+.certificate-icon img:hover {
+  opacity: 1;
+}
+
+/* Tooltip styling (adapted from your logo-item) */
+.certificate-icon::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  left: 50%;
+  bottom: calc(100% + 8px);
+  transform: translateX(-50%) translateY(4px);
+  background: var(--color-accent);
+  color: var(--color-base);
+  font-size: 0.8rem;
+  line-height: 1.2;
+  padding: 0.35rem 0.6rem;
+  border-radius: 6px;
+  white-space: nowrap;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, .1);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .15s ease, transform .15s ease;
+  z-index: 200;
+  white-space: normal;
+  /* allow text to wrap */
+  max-width: 500px;
+  /* cap width so it doesn’t get too wide */
+  text-align: center;
+  /* make multi-line tooltips look neat */
+  word-wrap: break-word;
+  /* break long words if needed */
+}
+
+/* Show tooltip on hover */
+.certificate-icon:hover::after {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
