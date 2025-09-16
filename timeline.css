@@ -300,3 +300,16 @@ body {
   opacity: 1;
   transform: translateX(-50%) translateY(0);
 }
+
+/* ===== Timeline Lists ===== */
+.content ul {
+  margin: 0.5rem 0 0.75rem 1.25rem; /* top/right/bottom/left */
+  padding-left: 1rem;               /* extra indentation */
+  font-size: 0.9rem;                 /* slightly smaller than paragraphs */
+  color: var(--color-ink);
+}
+
+.content li {
+  margin-bottom: 0.35rem;            /* tighter line spacing */
+  line-height: 1.4;
+}
