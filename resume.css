@@ -171,3 +171,16 @@ body {
   .logo img { height: 70px; } /* smaller logo for print */
   .cols { gap: 12px; }
 }
+
+/* Experience bullets */
+.bul {
+  margin: 6px 0 0 1.25rem;   /* add left indentation */
+  padding-left: 1rem;        /* consistent with timeline */
+  font-size: 0.9rem;         /* slightly smaller than .item p */
+  color: var(--color-ink);
+}
+
+.bul li {
+  margin-bottom: 0.35rem;    /* tighter spacing between bullets */
+  line-height: 1.4;
+}
