@@ -14,6 +14,7 @@
     <meta charset="utf-8" />
     <title>Mike Enting — Timeline</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://www.googletagmanager.com 'unsafe-inline'; connect-src 'self' https://www.google-analytics.com https://region1.google-analytics.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://www.google-analytics.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self'">
     <!-- Fonts to match site -->
     <link
         href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;600&display=swap"
@@ -22,12 +23,12 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="timeline.css">
 </head>
-<div class="scroll-progress" role="progressbar" aria-label="Scroll progress" aria-valuemin="0" aria-valuemax="100"
-    aria-valuenow="100">
-    <div class="scroll-progress__bar"></div>
-</div>
 
 <body>
+    <div class="scroll-progress" role="progressbar" aria-label="Scroll progress" aria-valuemin="0" aria-valuemax="100"
+        aria-valuenow="100">
+        <div class="scroll-progress__bar"></div>
+    </div>
     <nav class="navbar">
         <div class="nav-container">
             <a href="index.html#about" class="nav-logo" aria-label="Go to about">
@@ -41,265 +42,8 @@
             </ul>
         </div>
     </nav>
-    <div class="timeline">
-        <div class="container left">
-            <div class="content">
-                <h2>2023 - Current</h2>
-                <p><strong>IT Business Analyst at Tikkie, Amsterdam 🇳🇱</strong></p>
-                <p>Lead Analyst of a new <strong>Advertising & User Engagement
-                        platform</strong> in the Tikkie app, reaching <strong>10+ million users</strong>.</p>
-                <ul>
-                    <li>Gathered and translated business requirements into scalable technical solutions.</li>
-                    <li>Collaborated with cross-functional teams to ensure timely launch.</li>
-                    <li>Improved customer engagement and opened new revenue streams through in-app advertising.</li>
-                </ul>
-                <!-- Certificate icons row -->
-                <div class="certificates">
-                    <h3 class="certificates-title">Certificates</h3>
-                    <div class="certificate-icons"></div>
-                    <span class="certificate-icon" data-tooltip="Professional Scrum Product Owner: Advanced - Scrum.org">
-                        <img src="images/certificates/PSPO-A.webp" alt="Certificate">
-                    </span>
-                    <span class="certificate-icon" data-tooltip="Inzicht in Invloed - Bureau Zuidema">
-                        <img src="images/certificates/zuidema.png" alt="Certificate">
-                    </span>
-                    <span class="certificate-icon"
-                        data-tooltip="Google Data Analytics Professional Certificate - Google">
-                        <img src="images/certificates/google_analytics.png" alt="Certificate">
-                    </span>
-                    <span class="certificate-icon"
-                        data-tooltip="CS50W Web Programming with Python and JavaScript - Harvard University">
-                        <img src="images/certificates/harvard.png" alt="Certificate">
-                    </span>
-                </div>
-            </div>
-        </div>
-        <div class="container right">
-            <div class="content">
-                <h2>2022</h2>
-                <p><strong>Data Analyst at ABN AMRO, Amsterdam 🇳🇱</strong></p>
-                <p>Designed and implemented a <strong>bank-wide Behavioural Risk Management dashboard</strong>, adopted
-                    across multiple divisions.</p>
-                <ul>
-                    <li>Consolidated <strong>10+ data sources</strong> into a unified and sustainable data model</li>
-                    <li>Automated reporting, saving <strong>30+ hours of manual work per month</strong>.</li>
-                    <li>Ensured GDPR compliance through secure and automated access management.</li>
-                </ul>
-                <!-- Certificate icons row -->
-                <div class="certificates">
-                    <h3 class="certificates-title">Certificates</h3>
-                    <div class="certificate-icons"></div>
-                    <span class="certificate-icon"
-                        data-tooltip="CS50X Introduction to Computer Science - Harvard University">
-                        <img src="images/certificates/harvard.png" alt="Certificate">
-                    </span>
-                    <span class="certificate-icon"
-                        data-tooltip="CS50P Introduction to Programming with Python - Harvard University">
-                        <img src="images/certificates/harvard.png" alt="Certificate">
-                    </span>
-                    <span class="certificate-icon"
-                        data-tooltip="Professional Scrum Product Owner I (PSPO I) - Scrum.org">
-                        <img src="images/certificates/pspo.png" alt="Certificate">
-                    </span>
-                </div>
-            </div>
-        </div>
-        <div class="container left">
-            <div class="content">
-                <h2>2020</h2>
-                <p><strong>IT Business Developer at ABN AMRO, Amsterdam 🇳🇱</strong></p>
-                <p>Implemented and rolled out a <strong>bank-wide SaaS solution</strong> for GDPR-compliant Data Breach
-                    reporting.</p>
-                <ul>
-                    <li>Partnered with compliance, IT security, and legal stakeholders.</li>
-                    <li>Ensured <strong>full GDPR and information security alignment</strong>.</li>
-                    <li>Lead technical roll-out to <strong>20.000+</strong> employees, improving incident reporting
-                        speed and audit-readiness.</li>
-                </ul>
-                <!-- Certificate icons row -->
-                <div class="certificates">
-                    <h3 class="certificates-title">Certificates</h3>
-                    <div class="certificate-icons"></div>
-                    <span class="certificate-icon" data-tooltip="Power BI Data Analyst Associate - Microsoft">
-                        <img src="images/certificates/powerbi.png" alt="Certificate">
-                    </span>
-                    <span class="certificate-icon" data-tooltip="Expert in Sales - Kenneth Smit">
-                        <img src="images/certificates/expert_in_sales.png" alt="Certificate">
-                    </span>
-                    <span class="certificate-icon" data-tooltip="Assessment Automation & Incident Response - OneTrust">
-                        <img src="images/certificates/onetrust.svg" alt="Certificate">
-                    </span>
-                </div>
-            </div>
-        </div>
-        <div class="container right">
-            <div class="content">
-                <h2>2018</h2>
-                <p><strong>IT Engineer at ABN AMRO, Amsterdam 🇳🇱</strong></p>
-                <p>Completed a traineeship with a strong focus on personal leadership with focus on risk
-                    management and compliance.</p>
-                <ul>
-                    <li>Implemented changes to the <strong>bank-wide operational risk management platform</strong>.</li>
-                    <li>Developed foundations in Agile, stakeholder collaboration, and system delivery.</li>
-                </ul>
-                <!-- Certificate icons row -->
-                <div class="certificates">
-                    <h3 class="certificates-title">Certificates</h3>
-                    <div class="certificate-icons"></div>
-                    <span class="certificate-icon" data-tooltip="Professional Scrum Master I (PSM I) - Scrum.org">
-                        <img src="images/certificates/psm.png" alt="Certificate">
-                    </span>
-                    <span class="certificate-icon" data-tooltip="Foundations Of Financial Risk - GARP">
-                        <img src="images/certificates/garp.webp" alt="Certificate">
-                    </span>
-                    <span class="certificate-icon" data-tooltip="Architecture Awareness - Capgemini">
-                        <img src="images/certificates/architecture_awareness.png" alt="Certificate">
-                    </span>
-                </div>
-            </div>
-        </div>
-        <div class="container left">
-            <div class="content">
-                <h2>2018</h2>
-                <p><strong>Business Developer at Avocady Masters, Shanghai 🇨🇳 </strong></p>
-                <p>Supported market entry and growth strategy in China for a Dutch food exporter.</p>
-                <ul>
-                    <li>Conducted <strong>market research</strong> on consumer preferences and pricing trends.</li>
-                    <li>Built local distributor relationships and assisted with promotional campaigns.</li>
-                </ul>
-            </div>
-        </div>
-        <div class="container right">
-            <div class="content">
-                <h2>2017</h2>
-                <p><strong>MSc at Fudan University, Shanghai 🇨🇳 </strong></p>
-                <p>Awarded the competitive <a href="https://www.nuffic.nl/sino-dutch-scholarship" target="_blank"
-                        rel="noopener"><strong>SINO-Dutch Full Scholarship</strong></a> (top 5% of applicants).</p>
-                <ul>
-                    <li>Specialized in international trade policy and economic development.</li>
-                    <li>Developed expertise in <strong>China–Europe business relations</strong> and cross-cultural
-                        collaboration.</li>
-                    <li>Further deepened understanding of Chinese Language, achieving the highest level of Chinese
-                        Proficiency Test</li>
-                </ul>
-                <!-- Certificate icons row -->
-                <div class="certificates">
-                    <h3 class="certificates-title">Certificates</h3>
-                    <div class="certificate-icons"></div>
-                    <span class="certificate-icon"
-                        data-tooltip="HSK6 - Highest level of Chinese Proficiency Test - Hanban">
-                        <img src="images/certificates/hsk.png" alt="Certificate">
-                    </span>
-                </div>
-            </div>
-        </div>
-        <div class="container left">
-            <div class="content">
-                <h2>2016</h2>
-                <p><strong>MSc at University of Groningen, Groningen 🇳🇱</strong></p>
-                <p>Graduated with a 7.8 average grade (Thesis: <em>Cross-border Acquisition Completion or
-                        Abandonment</em>,
-                    grade 8/10).</p>
-                <ul>
-                    <li>Specialized in <strong>M&A, corporate strategy, and international expansion</strong>.</li>
-                    <li>Conducted research on decision-making in cross-border acquisitions.</li>
-                    <li>Gained practical consulting experience through a government-supported project for local SMEs
-                    </li>
-                </ul>
-                <!-- Certificate icons row -->
-                <div class="certificates">
-                    <h3 class="certificates-title">Certificates</h3>
-                    <div class="certificate-icons"></div>
-                    <span class="certificate-icon" data-tooltip="X-Culture Global Virtual Teamwork - X-Culture">
-                        <img src="images/certificates/x_culture.jpeg" alt="Certificate">
-                    </span>
-                    <span class="certificate-icon"
-                        data-tooltip="Business Research & Consulting - KVK and Province of Drenthe">
-                        <img src="images/certificates/kvk.png" alt="Certificate">
-                    </span>
-                </div>
-            </div>
-        </div>
-        <div class="container right">
-            <div class="content">
-                <h2>2015</h2>
-                <p><strong>Language Student at Tsinghua University, Beijing 🇨🇳</strong></p>
-                <p>Awarded the <strong>Confucius Scholarship</strong> to attend a full-time intensive Mandarin program.
-                </p>
-                <ul>
-                    <li>Achieved business-level Mandarin proficiency.</li>
-                    <li>Strengthened intercultural communication and academic collaboration skills.</li>
-                </ul>
-                </p>
-                <!-- Certificate icons row -->
-                <div class="certificates">
-                    <h3 class="certificates-title">Certificates</h3>
-                    <div class="certificate-icons"></div>
-                    <span class="certificate-icon"
-                        data-tooltip="HSK5 - Advanced level of Chinese Proficiency Test - Hanban">
-                        <img src="images/certificates/hsk.png" alt="Certificate">
-                    </span>
-                    <span class="certificate-icon" data-tooltip="Confucius Scholarship - Hanban">
-                        <img src="images/certificates/confucius.png" alt="Certificate">
-                    </span>
-                </div>
-            </div>
-        </div>
-        <div class="container left">
-            <div class="content">
-                <h2>2015</h2>
-                <p><strong>Exchange at NCTU, Hsinchu 🇹🇼 </strong></p>
-                <p>Completed exchange semester in International Business as part of Bachelor program.</p>
-                <ul>
-                    <li>Coursework in Asian business culture and economics.</li>
-                    <li>Sparked long-term interest in Chinese language and culture.</li>
-                </ul>
-            </div>
-        </div>
-        <div class="container right">
-            <div class="content">
-                <h2>2012</h2>
-                <p><strong>BSc at University of Groningen, Groningen 🇳🇱</strong></p>
-                <p>Completed BSc with focus on global strategy and competitive advantage.</p>
-                <ul>
-                    <li>Thesis: <em>Key Factors Leading to Sustained Competitive Advantage in the Motorcycle
-                            Industry</em>.</li>
-                    <li>Exchange semester in Taiwan (National Chiao Tung University).</li>
-                </ul>
-            </div>
-        </div>
-        <div class="container left">
-            <div class="content">
-                <h2>2011</h2>
-                <p><strong>🇺🇸 Kansas, USA</strong></p>
-                <p>Exchange program via Youth For Understanding (YFU).</p>
-                <ul>
-                    <li>Elected <strong>Representative of International Students</strong> in Student Senate.</li>
-                    <li>Gained early leadership experience in multicultural environment.</li>
-                </ul>
-                </p>
-            </div>
-        </div>
-
-        <div class="container right">
-            <div class="content">
-                <h2>2005</h2>
-                <p><strong>🇳🇱 Assen, NL</strong></p>
-                <p>Highschool (Atheneum). Specialization: <strong>Economics & Society</strong>.</p>
-                <ul>
-                    <li>Final project: <em>Americanisation of The Netherlands</em>.</li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="container left">
-            <div class="content">
-                <h2>1993</h2>
-                <p><strong>🇳🇱 Grolloo, NL</strong></p>
-                <p>🐣</p>
-            </div>
-        </div>
-    </div>
+    <div class="timeline" aria-live="polite"></div>
     <script src="timeline.js"></script>
 
 </body>
+</html>

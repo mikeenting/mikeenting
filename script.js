@@ -3,6 +3,29 @@ if (yearEl) {
   yearEl.textContent = new Date().getFullYear();
 }
 
+const prefersReducedMotion = () =>
+  window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+const smoothScrollToElement = (el) => {
+  if (!el) return;
+  const targetY = el.getBoundingClientRect().top + window.scrollY;
+  if (prefersReducedMotion()) {
+    window.scrollTo(0, targetY);
+    return;
+  }
+  window.scrollTo({ top: targetY, behavior: 'smooth' });
+};
+
+// Smooth scroll for "Get in Touch" and other #contact links
+document.querySelectorAll('a[href="#contact"]').forEach((link) => {
+  link.addEventListener('click', (evt) => {
+    const contact = document.getElementById('contact');
+    if (!contact) return;
+    evt.preventDefault();
+    smoothScrollToElement(contact);
+  });
+});
+
 // Analytics
 document.querySelectorAll('.contact-btn').forEach(btn => {
   btn.addEventListener('click', () => {
