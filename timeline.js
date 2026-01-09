@@ -1,6 +1,12 @@
 const timelineItems = [
   {
-    year: '2023 - Current',
+    year: '2026 - Current',
+    title: 'Product Owner at Tikkie, Amsterdam 🇳🇱',
+    summary: 'Promoted to Product Owner role starting January 2026.',
+    bullets: [],
+  },
+  {
+    year: '2023 - Dec 2025',
     title: 'IT Business Analyst at Tikkie, Amsterdam 🇳🇱',
     summary: 'Lead Analyst of a new <strong>Advertising & User Engagement platform</strong> in the Tikkie app, reaching <strong>10+ million users</strong>.',
     bullets: [
