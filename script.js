@@ -29,8 +29,10 @@ document.querySelectorAll('a[href="#contact"]').forEach((link) => {
 // Analytics
 document.querySelectorAll('.contact-btn').forEach(btn => {
   btn.addEventListener('click', () => {
+    if (typeof window.gtag !== 'function') return;
+
     const label = btn.getAttribute('aria-label') || 'Unknown';
-    gtag('event', 'click_contact', {
+    window.gtag('event', 'click_contact', {
       event_category: 'Contact',
       event_label: label
     });
@@ -41,7 +43,9 @@ document.querySelectorAll('.contact-btn').forEach(btn => {
 const resumeBtn = document.getElementById('download-resume');
 if (resumeBtn) {
   resumeBtn.addEventListener('click', () => {
-    gtag('event', 'download_resume', {
+    if (typeof window.gtag !== 'function') return;
+
+    window.gtag('event', 'download_resume', {
       event_category: 'Resume',
       event_label: 'Download Resume'
     });

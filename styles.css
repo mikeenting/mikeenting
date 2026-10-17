@@ -269,9 +269,10 @@ body {
   transform: translateX(-50%) translateY(0);
 }
 
-/* Optional accessible focus ring for keyboard users */
-.logo-item:focus {
-  outline: 2px sol
+/* Visible focus ring for keyboard users */
+.logo-item:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 3px;
 }
 
 /* Contact actions row */
